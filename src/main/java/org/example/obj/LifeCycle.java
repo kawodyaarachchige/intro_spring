@@ -1,5 +1,6 @@
 package org.example.obj;
 
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.context.ApplicationContext;
@@ -40,6 +41,11 @@ public class LifeCycle implements BeanNameAware, BeanFactoryAware, ApplicationCo
     public void destroy() throws Exception {
         System.out.println("Bean is destroyed");
 
+    }
+    //custom destroy annotation
+    @PreDestroy
+    public void getLost(){
+        System.out.println("Bean is pre destroyed");
     }
 
 

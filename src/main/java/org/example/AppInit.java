@@ -14,14 +14,14 @@ public class AppInit {
         ctx.register(Config.class);
         ctx.refresh();
         //
-        var otherObj = ctx.getBean(OtherObj.class);
-        System.out.println(otherObj.getClass().getName());
+       /* var otherObj = ctx.getBean(OtherObj.class);
+        System.out.println(otherObj.getClass().getName());*/
         //
-        var myObj = ctx.getBean(MyObj.class);
-        System.out.println(myObj);
+        /*var myObj = ctx.getBean(MyObj.class);
+        System.out.println(myObj);*/
         //
-        ConfigurableListableBeanFactory beanFactory = ctx.getBeanFactory();
-        System.out.println("is bean singleton: " + beanFactory.isSingleton("myObj"));
+       /* ConfigurableListableBeanFactory beanFactory = ctx.getBeanFactory();
+        System.out.println("is bean singleton: " + beanFactory.isSingleton("myObj"));*/
 
         ctx.registerShutdownHook();
 
