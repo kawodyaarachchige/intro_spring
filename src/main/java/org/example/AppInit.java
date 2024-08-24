@@ -1,6 +1,7 @@
 package org.example;
 
 
+import org.example.aop.Transaction;
 import org.example.config.Config;
 import org.example.obj.MyObj;
 import org.example.obj.OtherObj;
@@ -13,15 +14,10 @@ public class AppInit {
         var ctx = new AnnotationConfigApplicationContext();
         ctx.register(Config.class);
         ctx.refresh();
-        //
-       /* var otherObj = ctx.getBean(OtherObj.class);
-        System.out.println(otherObj.getClass().getName());*/
-        //
-        /*var myObj = ctx.getBean(MyObj.class);
-        System.out.println(myObj);*/
-        //
-       /* ConfigurableListableBeanFactory beanFactory = ctx.getBeanFactory();
-        System.out.println("is bean singleton: " + beanFactory.isSingleton("myObj"));*/
+
+        Transaction transaction = (Transaction) ctx.getBean("transaction");
+        transaction.startTrans();
+        transaction.endTrans();
 
         ctx.registerShutdownHook();
 
