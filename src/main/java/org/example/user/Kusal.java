@@ -3,15 +3,23 @@ package org.example.user;
 import jakarta.annotation.PostConstruct;
 import org.example.contracts.GoodGirl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Kusal {
 
-    private  final GoodGirl goodGirl;
+    private  GoodGirl goodGirl;
+
+
+   /* public Kusal(GoodGirl goodGirl) {
+        this.goodGirl = goodGirl;
+
+    }*/
 
     @Autowired
-    public Kusal(GoodGirl goodGirl) {
+    @Qualifier("Ugly")
+    public void setGoodGirl  (GoodGirl goodGirl) {
         this.goodGirl = goodGirl;
 
     }
