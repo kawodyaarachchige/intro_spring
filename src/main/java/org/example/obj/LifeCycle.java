@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 import static org.springframework.aop.interceptor.ExposeBeanNameAdvisors.getBeanName;
 
-@Component("LifeCycle")
+
 public class LifeCycle implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
 
     @Override
