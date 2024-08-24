@@ -7,13 +7,15 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Kusal {
-    //dependency injection - field Injection
+    //dependency injection - constructor  Injection
+
+    private GoodGirl goodGirl;
     @Autowired
-     GoodGirl goodGirl;
+    public Kusal(GoodGirl goodGirl) {
+        this.goodGirl = goodGirl;
 
-     public Kusal(){
+    }
 
-     }
      //post construct used for initialization
      @PostConstruct
      public void init(){
