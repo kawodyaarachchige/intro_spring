@@ -1,12 +1,14 @@
 package org.example.beans;
 
 import org.example.contracts.GoodGirl;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Tharushi implements GoodGirl {
+@Primary
+public class Anoja implements GoodGirl {
     @Override
     public void love() {
-        System.out.println("I love kusallll");
+        System.out.println("I love kusal");
     }
 }
