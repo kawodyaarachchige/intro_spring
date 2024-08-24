@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class Kusal {
     //dependency injection - constructor  Injection
 
-    private GoodGirl goodGirl;
+    private final GoodGirl goodGirl;
     @Autowired
     public Kusal(GoodGirl goodGirl) {
         this.goodGirl = goodGirl;
