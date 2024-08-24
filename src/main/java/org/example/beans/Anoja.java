@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
 public class Anoja implements GoodGirl {
     @Override
     public void love() {
-        System.out.println("I love kusal");
+        System.out.println("I love kusal putha");
     }
 }
