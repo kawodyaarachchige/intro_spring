@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Kusal {
-    //dependency injection
+    //dependency injection - field Injection
     @Autowired
      GoodGirl goodGirl;
 
